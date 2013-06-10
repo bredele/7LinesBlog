@@ -62,6 +62,8 @@ require(['OObject','Bind.plugin','CouchDBView','SocketIOTransport'], function( W
 JavaScript is Magic!
 
 ## Server-side
+
+ ```js
 var http  = require("http"),
   connect = require("connect"),
   io = require("socket.io"),
@@ -83,6 +85,8 @@ olives.registerSocketIO(socket);
 
 // Add the CouchDB handler to Olives
 olives.handlers.set("CouchDB", tools.handler);
+ ```
+
 
 ## Couchdb-side
 
