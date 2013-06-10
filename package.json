@@ -1,0 +1,19 @@
+{
+  "name": "realtime-blog",
+  "version": "0.0.0",
+  "description": "Meetup YYCJS - Olives.js demo",
+  "main": "server.js",
+  "scripts": {
+    "test": "",
+    "start": "node server.js"
+  },
+  "repository": "",
+  "author": "Olivier Wietrich",
+  "license": "BSD",
+  "dependencies": {
+    "socket.io": "~0.9.16",
+    "olives": "~1.4.1",
+    "connect": "~2.7.11",
+    "couchdb-emily-tools": "~2.0.0"
+  }
+}

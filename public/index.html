@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+  body {
+    color: #444;
+    font-family: "proxima-nova-1","proxima-nova-2",sans-serif;
+    font-size: 14px;
+    letter-spacing: .02em;
+    line-height: 22px;
+  }
+
+  ::selection
+  {
+    background: #e9f4ff;
+  }
+  ::-moz-selection
+  {
+    background: #e9f4ff;
+  }
+
+  .container {
+    width:600px;
+    margin:0 auto;
+  }
+
+  article {
+    margin:30px 0;
+  }
+
+  .title {
+    color: #4789ac;
+    display: inline;
+    margin:0;
+  }
+
+  .date {
+    float:right;
+    color:#7c7c7c;
+    font-size:12px;
+  }
+
+  .title:hover {
+    color: #244456;
+  }
+
+  .author {
+    color:#7c7c7c;
+    display: block;
+  }
+
+  input {
+    box-sizing: border-box;
+    outline:0;
+    padding:10px;
+    width:50%;
+    border: 1px solid gainsboro;
+  }
+  textarea {
+    box-sizing: border-box;
+    outline:0;
+    padding:10px;
+    border: 1px solid gainsboro;
+    resize: none;
+    width:100%;
+    height:200px;
+  }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <section data-model="foreach">
+      <article>
+        <header>
+          <h1 class="title" data-model="bind:innerHTML,value.title">Title</h1>
+          <time class="date" data-model="bind:innerHTML,value.date" datetime="2013-05-30">MVC meetup day</time>
+          <small class="author" data-model="bind:innerHTML,value.author">Olivier Wietrich</small>
+        </header>
+        <p data-model="bind:innerHTML,value.abstract">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae, mollitia, repellat, maiores non asperiores quod rem magnam placeat voluptates dolores vitae itaque voluptate harum blanditiis veritatis quisquam incidunt amet cum!
+        </p>
+      </article>
+    </section>
+  </div>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="lib/require.js"></script>
+  <script src="lib/emily.js"></script>
+  <script src="lib/olives.js"></script>
+  <script src="lib/couchdb.js"></script>
+  <script src="./blog.js"></script>
+</body>
+</html>
